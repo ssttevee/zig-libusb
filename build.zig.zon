@@ -1,0 +1,17 @@
+.{
+    .name = "libusb",
+    .version = "1.0.27+r0",
+    .minimum_zig_version = "0.13.0",
+    .dependencies = .{
+        .libusb = .{
+            // use zip because windows can't handle a symlink in the tar
+            .url = "https://github.com/libusb/libusb/archive/refs/tags/v1.0.27.zip",
+            .hash = "1220a596f46b3756d67cfa045696ba2b770f9f511b5af7fc4dd1cfe332f1b7992347",
+        },
+    },
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+    },
+}
